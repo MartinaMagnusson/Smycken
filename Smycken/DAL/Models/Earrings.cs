@@ -7,5 +7,7 @@
         public string Name { get; set; }
         public int ArticleNr { get; set; }
         public string Description { get; set; }
+        public virtual Jewelry Jewelry { get; set; }
+        public Image Images { get; set; }
     }
 }

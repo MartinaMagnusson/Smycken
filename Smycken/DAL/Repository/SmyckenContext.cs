@@ -18,6 +18,7 @@ namespace DAL.Repository
         public DbSet<Necklace> Necklaces { get; set; } 
         public DbSet<Earrings> Earrings { get; set; } 
         public DbSet<Product> Products { get; set; } 
-        public DbSet<Cart> Carts { get; set; } 
+        public DbSet<Cart> Carts { get; set; }
+       public DbSet<Image> Images { get; set; }
     }
 }

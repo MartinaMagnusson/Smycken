@@ -55,6 +55,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Earrings.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Jewelry.cs" />
     <Compile Include="Models\Necklace.cs" />
     <Compile Include="Models\Product.cs" />

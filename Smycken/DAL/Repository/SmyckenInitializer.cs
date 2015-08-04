@@ -20,6 +20,7 @@ namespace DAL.Repository
         private List<AncleJewelry> _ancleJewelries;
         private List<Cart> _carts;
         private List<Bracelet> _bracelets;
+        private List<Image> _images;
         public SmyckenInitializer()
         {
             _contact = new List<Contact>()
@@ -41,6 +42,7 @@ namespace DAL.Repository
             _jewelries = new List<Jewelry>();
             _necklaces = new List<Necklace>();
             _products = new List<Product>();
+            _images = new List<Image>();
         }
 
         public override void InitializeDatabase(SmyckenContext context)
@@ -54,6 +56,7 @@ namespace DAL.Repository
             _jewelries.ForEach(x=>context.Jewelries.Add(x));
             _necklaces.ForEach(x=>context.Necklaces.Add(x));
             _products.ForEach(x=>context.Products.Add(x));
+            _images.ForEach(x=>context.Images.Add(x));
             base.InitializeDatabase(context);
         }
     }

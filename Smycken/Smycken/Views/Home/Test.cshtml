@@ -1,0 +1,18 @@
+﻿
+@model List<DAL.HelperClasses.ContactHelper>
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test</h2>
+
+@foreach (var test in Model)
+{
+   <p>@test.Name</p>
+   <p>@test.Title</p>
+   <p>@test.Date</p>
+   <p>@test.Message</p>
+}
+

@@ -5,8 +5,11 @@
     ViewBag.Title = "Test";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Test</h2>
+@section side
+{
+    Länkar!!
+}
+<h1>Test</h1>
 
 @foreach (var test in Model)
 {

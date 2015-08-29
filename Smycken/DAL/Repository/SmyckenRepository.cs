@@ -12,22 +12,35 @@ namespace DAL.Repository
     {
         public SmyckenRepository()
         {
-            
+
         }
 
+        public List<ImageHelper> GetAllNewsImage()
+        {
+            using (var _context = new SmyckenContext())
+            {
+                return (from i in _context.Images
+                        select new ImageHelper()
+                        {
+                            URL = i.URL,
+                            ImageName = i.ImageName,
+                            News = true
+                        }).ToList();
+            }
+        }
         public List<ContactHelper> GetContactInformation()
         {
             using (var _context = new SmyckenContext())
             {
                 return (from c in _context.Contact
-                    select new ContactHelper()
-                    {
-                        Name = c.Name,
-                        Email = c.Email,
-                        Date = c.Date,
-                        Message = c.Message,
-                        Title = c.Title
-                    }).ToList();
+                        select new ContactHelper()
+                        {
+                            Name = c.Name,
+                            Email = c.Email,
+                            Date = c.Date,
+                            Message = c.Message,
+                            Title = c.Title
+                        }).ToList();
             }
         }
     }

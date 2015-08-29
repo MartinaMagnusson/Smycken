@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HelperClasses\ContactHelper.cs" />
+    <Compile Include="HelperClasses\ImageHelper.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\AncleJewelry.cs" />
     <Compile Include="Models\Bracelet.cs" />

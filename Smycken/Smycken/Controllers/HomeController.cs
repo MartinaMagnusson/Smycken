@@ -11,6 +11,7 @@ namespace Smycken.Controllers
     public class HomeController : Controller
     {
         private SmyckenRepository _smyckeRepo;
+        
 
         public HomeController()
         { 
@@ -18,7 +19,9 @@ namespace Smycken.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            var image = _smyckeRepo.GetAllNewsImage();
+
+            return View(image);
         }
 
         public ActionResult Test()

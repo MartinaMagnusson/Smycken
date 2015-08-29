@@ -1,9 +1,14 @@
-﻿
+﻿@model List<DAL.HelperClasses.ImageHelper>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
 <div>
+
+    @foreach (var image in Model)
+    {
+<p>@image.ImageName</p>
+    }
     <br>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

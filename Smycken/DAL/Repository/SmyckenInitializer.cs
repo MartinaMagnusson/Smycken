@@ -42,21 +42,47 @@ namespace DAL.Repository
             _jewelries = new List<Jewelry>();
             _necklaces = new List<Necklace>();
             _products = new List<Product>();
-            _images = new List<Image>();
+            _images = new List<Image>()
+            {
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Ankelsmycken",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Armband",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Halsband",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Örhängen",
+                    News = true
+                }
+            };
         }
 
         public override void InitializeDatabase(SmyckenContext context)
         {
             _contact.ForEach(x => context.Contact.Add(x));
             _about.ForEach(x => context.About.Add(x));
-            _bracelets.ForEach(x=>context.Bracelets.Add(x));
-            _ancleJewelries.ForEach(x=>context.AncleJewelries.Add(x));
-            _carts.ForEach(x=>context.Carts.Add(x));
-            _earrings.ForEach(x=>context.Earrings.Add(x));
-            _jewelries.ForEach(x=>context.Jewelries.Add(x));
-            _necklaces.ForEach(x=>context.Necklaces.Add(x));
-            _products.ForEach(x=>context.Products.Add(x));
-            _images.ForEach(x=>context.Images.Add(x));
+            _bracelets.ForEach(x => context.Bracelets.Add(x));
+            _ancleJewelries.ForEach(x => context.AncleJewelries.Add(x));
+            _carts.ForEach(x => context.Carts.Add(x));
+            _earrings.ForEach(x => context.Earrings.Add(x));
+            _jewelries.ForEach(x => context.Jewelries.Add(x));
+            _necklaces.ForEach(x => context.Necklaces.Add(x));
+            _products.ForEach(x => context.Products.Add(x));
+            _images.ForEach(x => context.Images.Add(x));
             base.InitializeDatabase(context);
         }
     }

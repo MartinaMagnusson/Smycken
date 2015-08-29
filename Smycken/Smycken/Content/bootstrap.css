@@ -858,7 +858,7 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
+  /*padding-right: 15px;*/
   padding-left: 15px;
 }
 
@@ -4930,6 +4930,7 @@ a.list-group-item.active > .badge,
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
+  margin-top: -10px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;

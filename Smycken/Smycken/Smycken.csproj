@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -175,11 +176,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\mail.png" />
+    <Content Include="Images\instagram.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\images.jpg" />
     <Content Include="Images\images1.jpg" />
     <Content Include="Images\images2.jpg" />
     <Content Include="Images\images3.jpg" />
-    <Content Include="Images\images4.jpg" />
-    <Content Include="Images\images.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -193,7 +197,14 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\responsiveslides.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SlideImages\images.jpg" />
+    <Content Include="SlideImages\images1.jpg" />
+    <Content Include="SlideImages\images2.jpg" />
+    <Content Include="SlideImages\images3.jpg" />
+    <Content Include="SlideImages\images4.jpg" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

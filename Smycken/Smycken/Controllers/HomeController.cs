@@ -13,7 +13,7 @@ namespace Smycken.Controllers
         private SmyckenRepository _smyckeRepo;
 
         public HomeController()
-        {
+        { 
             _smyckeRepo = new SmyckenRepository();
         }
         public ActionResult Index()

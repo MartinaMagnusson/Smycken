@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
+    margin:0;
+    padding: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -17,15 +18,80 @@ textarea {
 }
 
 .margin {
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
+    margin: 0 !important;
 }
 
-.side {
-    float: left;
-    background: lightblue;
+h1 {
+    background-color: lightgray;
+    padding: 40px;
+    margin-top: 0 !important;
+}
 
+nav {
+    float: left;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+    nav ul li {
+        list-style-type: none;
+    }
+
+img.lala:hover {
+    opacity: 0.5;
+    color: white;
+}
+
+hr {
+    height: 0.1em;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+#bottomLine {
+    height: 0.1em;
+    color: #333;
+    opacity: 0.4;
 }
 
 .wrapper {
     float: right;
+}
+
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    max-height: 300px;
+}
+
+ul {
+
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+    li h3 {
+        font-size: 1.3rem;
+    }
+
+    li a {
+        text-decoration: none;
+        margin-left: -40px;
+        font-size: 1rem;
+        color: white;
+    }
+
+footer {
+    background-color: black;
+    height: auto;
+}
+
+.footer-list {
+    padding: 10px;
 }

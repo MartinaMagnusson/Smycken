@@ -67,6 +67,30 @@ namespace DAL.Repository
                     URL = "lovepeace1.jpg",
                     ImageName = "Örhängen",
                     News = true
+                },
+                           new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Nyheter",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Text",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Text",
+                    News = true
+                },
+                new Image()
+                {
+                    URL = "lovepeace1.jpg",
+                    ImageName = "Text",
+                    News = true
                 }
             };
         }

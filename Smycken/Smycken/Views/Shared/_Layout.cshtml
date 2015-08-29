@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -14,77 +15,97 @@
 </head>
 <body>
     <div class="row">
-        <header class="col-md-6 col-md-offset-3">
-            <div class="col-md-12">
-                <h1 class="col-md-5">Fannys Smycken</h1>
-                <div class="col-md-4 info">
-                    <p><span class="bold">Frakt</span> 49 kr</p>
-                    <p><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="#" alt="Kundkorg" />
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <header>
+                    <div class="col-md-12">
+                        <h1 class="col-md-5">Fannys Smycken</h1>
+                        <div class="col-md-4 info">
+                            <p><span class="bold">Frakt</span> 49 kr</p>
+                            <p><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="#" alt="Kundkorg" />
+                        </div>
+                    </div>
+                </header>
+                <hr />
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+       
+            <div class="col-md-10 col-md-offset-1">
+                <div>
+                    @RenderBody()
                 </div>
             </div>
-        </header>
-        <div class="col-md-6 col-md-offset-3">
-            <div>
-                @RenderBody()
-            </div>
-            <hr class="col-md-12" id="bottomLine" />
+
         </div>
+        <div class="row">
+            <footer>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 footer-list">
+                        <ul class="col-md-3">
+                            <li>
+                                <h3>KUNDTJÄNST</h3>
+                                <ul>
+                                    <li><a href="#">KONTAKTA OSS</a></li>
+                                    <li><a href="#">KÖPVILLKOR</a></li>
+                                    <li><a href="#">RETURER & BYTEN</a></li>
+                                    <li><a href="#">REKLAMATIONER</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
-    </div>
-    <div class="row">
-        <footer class="col-md-12">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list">
-                    <ul class="col-md-3">
-                        <li>
-                            <h3>KUNDTJÄNST</h3>
-                            <ul>
-                                <li><a href="#">KONTAKTA OSS</a></li>
-                                <li><a href="#">KÖPVILLKOR</a></li>
-                                <li><a href="#">RETURER & BYTEN</a></li>
-                                <li><a href="#">REKLAMATIONER</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        <ul class="col-md-3">
+                            <li>
+                                <h3>INFORMATION</h3>
+                                <ul>
+                                    <li><a href="#">OM FÖRETAGET</a></li>
+                                    <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
-                    <ul class="col-md-3">
-                        <li>
-                            <h3>INFORMATION</h3>
-                            <ul>
-                                <li><a href="#">OM FÖRETAGET</a></li>
-                                <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        <ul class="col-md-3">
+                            <li>
+                                <h3>SOCIALA MEDIER</h3>
+                                <ul>
+                                    <li><a href="#">FACEBOOK</a></li>
+                                    <li><a href="#">INSTAGRAM</a></li>
+                                    <li><a href="#">TWITTER</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
-                    <ul class="col-md-3">
-                        <li>
-                            <h3>SOCIALA MEDIER</h3>
-                            <ul>
-                                <li><a href="#">FACEBOOK</a></li>
-                                <li><a href="#">INSTAGRAM</a></li>
-                                <li><a href="#">TWITTER</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <ul class="col-md-3">
-                        <li>
-                            <h3>SORTIMENT</h3>
-                            <ul>
-                                <li><a href="#">ANKELSMYCKEN</a></li>
-                                <li><a href="#">ARMBAND</a></li>
-                                <li><a href="#">HALSBAND</a></li>
-                                <li><a href="#">ÖRHÄNGEN</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        <ul class="col-md-3">
+                            <li>
+                                <h3>SORTIMENT</h3>
+                                <ul>
+                                    <li><a href="#">ANKELSMYCKEN</a></li>
+                                    <li><a href="#">ARMBAND</a></li>
+                                    <li><a href="#">HALSBAND</a></li>
+                                    <li><a href="#">ÖRHÄNGEN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

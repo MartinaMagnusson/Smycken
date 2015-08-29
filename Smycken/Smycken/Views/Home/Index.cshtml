@@ -2,13 +2,9 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
+    int count = 0;
 }
 <div>
-
-    @foreach (var image in Model)
-    {
-<p>@image.ImageName</p>
-    }
     <br>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -52,49 +48,26 @@
 
 <div>
     <div class="row margin">
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Ankelsmycken</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Armband</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Halsband</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Örhängen</p>
-        </a>
+        @foreach (var image in Model)
+        {
+            <a href="#" class="col-md-3 col-sm-6 col-xs-12">
+                <img class="news col-md-12" src="~/Images/@image.URL" />
+                <p class="caption col-md-12">@image.ImageName</p>
+            </a>
+            count++;
+            if (count == 4)
+            {
+                <hr style="height:0.05em; width: 100%; opacity: 0.3;" />
+            }
+        }
     </div>
-    <hr style="height:0.05em; opacity: 0.3" />
-    <div class="row margin">
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Nyheter</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Text</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Text</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <img class="news col-md-12" src="~/Images/lovepeace1.jpg" />
-            <p class="caption col-md-12">Text</p>
-        </a>
-    </div>
-    <hr style="height:0.05em; opacity: 0.3" />
-    <div class="col-md-8 col-md-offset-2">
-        <a href="#"><img class="col-md-3" src="~/Images/facebook.png" /></a>
-        <a href="#"><img class="col-md-3" src="~/Images/instagram.png" /></a>
-        <a href="#"><img class="col-md-3" src="~/Images/twitter.png" /></a>
-        <a href="#"><img class="col-md-3" src="~/Images/mail.png" /></a>
-    </div>
+
+
 </div>
-
-
+<hr style="height:0.05em; opacity: 0.3" />
+<div class="media col-md-8 col-md-offset-2">
+    <a href="#"><img class="col-md-3" src="~/Images/facebook.png" /></a>
+    <a href="#"><img class="col-md-3" src="~/Images/instagram.png" /></a>
+    <a href="#"><img class="col-md-3" src="~/Images/twitter.png" /></a>
+    <a href="#"><img class="col-md-3" src="~/Images/mail.png" /></a>
+</div>

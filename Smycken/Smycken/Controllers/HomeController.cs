@@ -24,6 +24,12 @@ namespace Smycken.Controllers
             return View(image);
         }
 
+
+        [ChildActionOnly]
+        public ActionResult Carousel()
+        {
+            return PartialView();
+        }
         public ActionResult Test()
         {
             var contact = _smyckeRepo.GetContactInformation();

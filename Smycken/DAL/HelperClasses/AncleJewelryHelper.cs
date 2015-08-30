@@ -14,7 +14,9 @@ namespace DAL.HelperClasses
         public string Name { get; set; }
         public int ArticleNr { get; set; }
         public string Description { get; set; }
-        public ImageHelper Images { get; set; }
+        public int ImgID { get; set; }
+        public string ImageName { get; set; }
+        public string ImgURL { get; set; }
 
         public virtual JewelryHelper Jewelry { get; set; }
 

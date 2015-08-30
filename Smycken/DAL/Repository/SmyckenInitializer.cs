@@ -9,7 +9,7 @@ using DAL.Models;
 
 namespace DAL.Repository
 {
-    public class SmyckenInitializer : DropCreateDatabaseIfModelChanges<SmyckenContext>
+    public class SmyckenInitializer : DropCreateDatabaseAlways<SmyckenContext>
     {
         private List<Contact> _contact;
         private List<About> _about;
@@ -33,6 +33,7 @@ namespace DAL.Repository
                             Price = 59,
                             ArticleNr = 0001,
                             Description = "Ett ankelsmycke", 
+                            Images_ID = 1,
                         }};
             _necklaces = new List<Necklace>();
             _carts = new List<Cart>();

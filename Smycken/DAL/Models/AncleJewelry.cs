@@ -9,6 +9,7 @@ namespace DAL.Models
         public string Description { get; set; }
         public virtual Jewelry Jewelry { get; set; }
 
-        public Image Images { get; set; }
+        public int Images_ID { get; set; }
+        public virtual Image Image { get; set; }
     }
 }

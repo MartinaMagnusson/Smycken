@@ -55,6 +55,9 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
+                            ImgID = a.Images_ID,
+                            ImgURL = a.Image.URL,
+                            ImageName = a.Image.ImageName 
                         }).ToList();
             }
         }

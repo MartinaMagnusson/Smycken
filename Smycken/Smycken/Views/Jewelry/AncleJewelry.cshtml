@@ -8,41 +8,9 @@
 <div class="row margin">
     @foreach (var item in Model)
     {
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
-        <a href="#" class="col-md-3 col-sm-6 col-xs-12">
-            <h3>@item.Name</h3>
-            <p>@item.Images</p>
-            <p>@item.Description</p>
-            <p>@item.Price kr</p>
-        </a>
+        <h3>@item.Name</h3>
+        <img src="~/Images/@item.ImgURL" alt="@item.ImageName" />
+        <p>@item.Description</p>
+        <p>@item.Price</p>
     }
 </div>

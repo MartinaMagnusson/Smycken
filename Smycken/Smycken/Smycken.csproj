@@ -177,6 +177,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\check_mark.ico" />
+    <Content Include="Images\thumb.ico" />
+    <Content Include="Images\shoppingbag.ico" />
     <Content Include="Images\lovepeace1.jpg" />
     <Content Include="Images\mail.png" />
     <Content Include="Images\instagram.png" />

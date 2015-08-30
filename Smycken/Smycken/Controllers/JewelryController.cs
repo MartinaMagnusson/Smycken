@@ -1,4 +1,5 @@
-﻿using DAL.Repository;
+﻿using DAL.HelperClasses;
+using DAL.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,15 @@ namespace Smycken.Controllers
             var ancleJewelry = _smyckeRepoGet.GetAllAncleJewelry();
 
             return View(ancleJewelry);
+        }
+        public ActionResult AddAncleJewelry()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddAncleJewelry(AncleJewelryHelper ancleJewelry)
+        {
+            return View();
         }
 
     }

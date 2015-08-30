@@ -47,7 +47,7 @@
                             <h3 class="header-heading">
                                 Hög Kvalitet
                             </h3>
-                                <div class="sep"></div>
+                            <div class="sep"></div>
                         </a>
                     </div>
 
@@ -65,14 +65,15 @@
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">WebSiteName</a>
+                            @*<a class="navbar-brand" href="#">WebSiteName</a>*@
                         </div>
                         <div>
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">Page 1</a></li>
-                                <li><a href="#">Page 2</a></li>
-                                <li><a href="#">Page 3</a></li>
+                                <li class="active">@Html.ActionLink("Hem", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Ankelsmycken", "AncleJewelry", "Jewelry")</li>
+                                <li>@Html.ActionLink("Armband", "Index", "Jewelry")</li>
+                                <li>@Html.ActionLink("Halsband", "Index", "Jewelry")</li>
+                                <li>@Html.ActionLink("Örhänge", "Index", "Jewelry")</li>
                             </ul>
                         </div>
                     </div>
@@ -134,10 +135,10 @@
                             <li>
                                 <h3>SORTIMENT</h3>
                                 <ul>
-                                    <li><a href="#">ANKELSMYCKEN</a></li>
-                                    <li><a href="#">ARMBAND</a></li>
-                                    <li><a href="#">HALSBAND</a></li>
-                                    <li><a href="#">ÖRHÄNGEN</a></li>
+                                    <li>@Html.ActionLink("ANKELSMYCKEN", "AncleJewelry", "Jewelry")</li>
+                                    <li>@Html.ActionLink("ARMBAND", "Index", "Jewelry")</li>
+                                    <li>@Html.ActionLink("HALSBAND", "Index", "Jewelry")</li>
+                                    <li>@Html.ActionLink("ÖRHÄNGEN", "Index", "Jewelry")</li>
                                 </ul>
                             </li>
                         </ul>

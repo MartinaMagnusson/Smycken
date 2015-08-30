@@ -148,6 +148,10 @@ hr {
     display: inline-block;
 }
 
+.header-heading {
+    display: block;
+}
+
 .seper {
     border-top: 3px solid #36d7b7;
     width: 80px;
@@ -173,6 +177,10 @@ hr {
 .test a:hover {
     color: #36d7b7;
     text-decoration: none;
+}
+
+.test2:hover {
+      color: #36d7b7;
 }
 
 li {

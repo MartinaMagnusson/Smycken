@@ -10,16 +10,16 @@ namespace Smycken.Controllers
 {
     public class HomeController : Controller
     {
-        private SmyckenRepository _smyckeRepo;
+        private SmyckenRepositoryGet _smyckeRepoGet;
         
 
         public HomeController()
-        { 
-            _smyckeRepo = new SmyckenRepository();
+        {
+            _smyckeRepoGet = new SmyckenRepositoryGet();
         }
         public ActionResult Index()
         {
-            var image = _smyckeRepo.GetAllNewsImage();
+            var image = _smyckeRepoGet.GetAllNewsImage();
 
             return View(image);
         }
@@ -32,7 +32,7 @@ namespace Smycken.Controllers
         }
         public ActionResult Test()
         {
-            var contact = _smyckeRepo.GetContactInformation();
+            var contact = _smyckeRepoGet.GetContactInformation();
             return View(contact);
         }
 

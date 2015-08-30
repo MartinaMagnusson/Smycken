@@ -48,8 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelperClasses\AncleJewelryHelper.cs" />
+    <Compile Include="HelperClasses\BraceletHelper.cs" />
     <Compile Include="HelperClasses\ContactHelper.cs" />
+    <Compile Include="HelperClasses\EarringsHelper.cs" />
     <Compile Include="HelperClasses\ImageHelper.cs" />
+    <Compile Include="HelperClasses\JewelryHelper.cs" />
+    <Compile Include="HelperClasses\NecklaceHelper.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\AncleJewelry.cs" />
     <Compile Include="Models\Bracelet.cs" />
@@ -63,7 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\SmyckenContext.cs" />
     <Compile Include="Repository\SmyckenInitializer.cs" />
-    <Compile Include="Repository\SmyckenRepository.cs" />
+    <Compile Include="Repository\SmyckenRepositoryGet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,7 +9,7 @@ using DAL.Models;
 
 namespace DAL.Repository
 {
-    public class SmyckenInitializer : DropCreateDatabaseAlways<SmyckenContext>
+    public class SmyckenInitializer : DropCreateDatabaseIfModelChanges<SmyckenContext>
     {
         private List<Contact> _contact;
         private List<About> _about;
@@ -23,24 +23,54 @@ namespace DAL.Repository
         private List<Image> _images;
         public SmyckenInitializer()
         {
-            _contact = new List<Contact>()
-            {
-                new Contact()
-                {
-                    Date = DateTime.Now,
-                    Email = "hej",
-                    Message = "Hejhej",
-                    Name = "Martina",
-                    Title = "hej"
-                }
-            };
+            _contact = new List<Contact>();
             _about = new List<About>();
             _bracelets = new List<Bracelet>();
-            _ancleJewelries = new List<AncleJewelry>();
+            _ancleJewelries = new List<AncleJewelry>() {
+             new AncleJewelry()
+                        {
+                            Name = "Ankelsmycke",
+                            Price = 59,
+                            ArticleNr = 0001,
+                            Description = "Ett ankelsmycke", 
+                        }};
+            _necklaces = new List<Necklace>();
             _carts = new List<Cart>();
             _earrings = new List<Earrings>();
-            _jewelries = new List<Jewelry>();
-            _necklaces = new List<Necklace>();
+            _jewelries = new List<Jewelry>() {
+                new Jewelry() {
+                    Bracelets = new List<Bracelet>()
+                    {
+                        new Bracelet()
+                        {
+                            Name = "Armband",
+                            Price = 49,
+                            ArticleNr = 0002,
+                            Description = "Ett armband",
+                        }
+                    },
+                    Earrings = new List<Earrings>()
+                    {
+                        new Earrings()
+                        {
+                            Name = "Örhänge",
+                            Price = 69,
+                            ArticleNr = 0003,
+                            Description = "Fina örhänge",
+                        }
+                    },
+                    Necklaces = new List<Necklace>()
+                    {
+                        new Necklace()
+                        {
+                            Name = "Halsband",
+                            Price = 79,
+                            ArticleNr = 0004,
+                            Description = "Finat halsband",
+                        }
+                    }
+                }
+            };
             _products = new List<Product>();
             _images = new List<Image>()
             {

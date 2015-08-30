@@ -12,6 +12,7 @@ namespace DAL.Models
         public string ImageName { get; set; }
         public string URL { get; set; }
         public bool News { get; set; }
+        public string Categori { get; set; }
     }
-}
+}   
     

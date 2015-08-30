@@ -13,9 +13,10 @@ namespace DAL.HelperClasses
         public string ImageName { get; set; }
         public string URL { get; set; }
         public bool News { get; set; }
+        public string Categori { get; set; }
         public IEnumerator GetEnumerator()
         {
             throw new NotImplementedException();
-        }
+        }   
     }
 }

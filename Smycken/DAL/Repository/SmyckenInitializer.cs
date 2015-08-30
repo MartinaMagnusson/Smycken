@@ -79,7 +79,8 @@ namespace DAL.Repository
                 {
                     URL = "lovepeace1.jpg",
                     ImageName = "Ankelsmycken",
-                    News = true
+                    News = true,
+                    Categori = "AncleJewelry"
                 },
                 new Image()
                 {

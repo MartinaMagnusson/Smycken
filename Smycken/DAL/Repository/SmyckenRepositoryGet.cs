@@ -24,7 +24,8 @@ namespace DAL.Repository
                         {
                             URL = i.URL,
                             ImageName = i.ImageName,
-                            News = true
+                            News = true,
+                            Categori = i.Categori
                         }).ToList();
             }
         }

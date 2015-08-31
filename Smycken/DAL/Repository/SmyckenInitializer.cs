@@ -33,7 +33,12 @@ namespace DAL.Repository
                             Price = 59,
                             ArticleNr = 0001,
                             Description = "Ett ankelsmycke", 
-                            Images_ID = 1,
+                            Image = new Image()
+                            {
+                                ImageName = "Ankelsmycke",
+                                News = false,
+                                URL = "lovepeace1.jpg"
+                            }
                         }};
             _necklaces = new List<Necklace>();
             _carts = new List<Cart>();

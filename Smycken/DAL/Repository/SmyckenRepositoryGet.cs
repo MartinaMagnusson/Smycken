@@ -20,11 +20,12 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from i in _context.Images
+                        where (i.News == true)
                         select new ImageHelper()
                         {
                             URL = i.URL,
                             ImageName = i.ImageName,
-                            News = true,
+                            News = i.News,
                             Categori = i.Categori
                         }).ToList();
             }
@@ -56,9 +57,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImgID = a.Images_ID,
                             ImgURL = a.Image.URL,
-                            ImageName = a.Image.ImageName 
                         }).ToList();
             }
         }

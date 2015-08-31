@@ -26,53 +26,26 @@ namespace DAL.Repository
             _contact = new List<Contact>();
             _about = new List<About>();
             _bracelets = new List<Bracelet>();
-            _ancleJewelries = new List<AncleJewelry>() {
-             new AncleJewelry()
-                        {
-                            Name = "Ankelsmycke",
-                            Price = 59,
-                            ArticleNr = 0001,
-                            Description = "Ett ankelsmycke", 
-                            Image = new Image()
-                            {
-                                ImageName = "Ankelsmycke",
-                                News = false,
-                                URL = "lovepeace1.jpg"
-                            }
-                        }};
+            _ancleJewelries = new List<AncleJewelry>();
             _necklaces = new List<Necklace>();
             _carts = new List<Cart>();
             _earrings = new List<Earrings>();
             _jewelries = new List<Jewelry>() {
                 new Jewelry() {
-                    Bracelets = new List<Bracelet>()
+                    AncleJewelries = new List<AncleJewelry>()
                     {
-                        new Bracelet()
+                        new AncleJewelry()
                         {
-                            Name = "Armband",
+                            Name = "Ankelsmycke",
                             Price = 49,
                             ArticleNr = 0002,
-                            Description = "Ett armband",
-                        }
-                    },
-                    Earrings = new List<Earrings>()
-                    {
-                        new Earrings()
-                        {
-                            Name = "Örhänge",
-                            Price = 69,
-                            ArticleNr = 0003,
-                            Description = "Fina örhänge",
-                        }
-                    },
-                    Necklaces = new List<Necklace>()
-                    {
-                        new Necklace()
-                        {
-                            Name = "Halsband",
-                            Price = 79,
-                            ArticleNr = 0004,
-                            Description = "Finat halsband",
+                            Description = "Ett ankelsmycke",
+                            Image = new Image()
+                            {
+                                Description = "Ett ankelsmycke",
+                                News = false,
+                                FileName = "lovepeace1.jpg"
+                            }
                         }
                     }
                 }
@@ -82,51 +55,54 @@ namespace DAL.Repository
             {
                 new Image()
                 {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Ankelsmycken",
+                    FileName = "lovepeace1.jpg",
+                    Description = "Ankelsmycken",
                     News = true,
                     Categori = "AncleJewelry"
                 },
                 new Image()
                 {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Armband",
+                    FileName = "lovepeace1.jpg",
+                    Description = "Armband",
+                    News = true,
+                    Categori = "Bracelet"
+                },
+                new Image()
+                {
+                    FileName = "lovepeace1.jpg",
+                    Description = "Halsband",
+                    News = true,
+                    Categori = "Necklace"
+                },
+                new Image()
+                {
+                    FileName = "lovepeace1.jpg",
+                    Description = "Örhängen",
+                    News = true,
+                    Categori ="Earrings"
+                },
+                new Image()
+                {
+                    FileName = "lovepeace1.jpg",
+                    Description = "Nyheter",
                     News = true
                 },
                 new Image()
                 {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Halsband",
+                   FileName = "lovepeace1.jpg",
+                    Description = "Nyheter",
                     News = true
                 },
                 new Image()
                 {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Örhängen",
-                    News = true
-                },
-                           new Image()
-                {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Nyheter",
+                    FileName = "lovepeace1.jpg",
+                    Description = "Nyheter",
                     News = true
                 },
                 new Image()
                 {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Text",
-                    News = true
-                },
-                new Image()
-                {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Text",
-                    News = true
-                },
-                new Image()
-                {
-                    URL = "lovepeace1.jpg",
-                    ImageName = "Text",
+                    FileName = "lovepeace1.jpg",
+                    Description = "Nyheter",
                     News = true
                 }
             };

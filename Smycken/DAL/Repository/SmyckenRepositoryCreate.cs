@@ -10,20 +10,27 @@ namespace DAL.Repository
 {
     public class SmyckenRepositoryCreate
     {
-        //public void AddAncleJewelry(AncleJewelryHelper ancleJewelry)
-        //{
-        //    using (var _context = new SmyckenContext())
-        //    {
-        //        _context.AncleJewelries.Add(new AncleJewelry
-        //        {
-        //            ArticleNr = ancleJewelry.ArticleNr,
-        //            Description = ancleJewelry.Description,
-        //            Name = ancleJewelry.Name,
-        //            Price = ancleJewelry.Price,
-              
-        //        });
-        //        _context.SaveChanges();
-        //    }
-        //}
+        public void AddAncleJewelry(AncleJewelryHelper ancleJewelry, Image image)
+        {
+            using (var _context = new SmyckenContext())
+            {
+                _context.AncleJewelries.Add(new AncleJewelry()
+                {
+                    ArticleNr = ancleJewelry.ArticleNr,
+                    Description = ancleJewelry.Description,
+                    Name = ancleJewelry.Name,
+                    Price = ancleJewelry.Price,
+                    Image = _context.Images.Add(new Image()
+                    {
+                        Categori = image.Categori,
+                        Description = image.Description,
+                        FileName = image.FileName,
+                        News = image.News,
+                    })
+
+                });
+                _context.SaveChanges();
+            }
+        }
     }
 }

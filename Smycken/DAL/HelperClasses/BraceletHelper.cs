@@ -14,9 +14,11 @@ namespace DAL.HelperClasses
         public string Name { get; set; }
         public int ArticleNr { get; set; }
         public string Description { get; set; }
-        public ImageHelper Images { get; set; }
+        public int ImageID { get; set; }
+        public string ImageFileName { get; set; }
 
-        public virtual JewelryHelper Jewelry { get; set; }
+        public string Category { get; set; }
+
         public IEnumerator GetEnumerator()
         {
             throw new NotImplementedException();

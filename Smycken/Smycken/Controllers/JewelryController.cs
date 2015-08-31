@@ -23,15 +23,22 @@ namespace Smycken.Controllers
 
             return View(ancleJewelry);
         }
-        public ActionResult AddAncleJewelry()
+
+        public ActionResult Bracelet()
         {
-            return View();
+            var bracelet = _smyckeRepoGet.GetAllBracelet();
+            return View(bracelet);
         }
-        [HttpPost]
-        public ActionResult AddAncleJewelry(AncleJewelryHelper ancleJewelry)
+        public ActionResult Earrings()
         {
-            return View();
+            var earrings = _smyckeRepoGet.GetAllEarrings();
+            return View(earrings);
         }
 
+        public ActionResult Necklace()
+        {
+            var necklace = _smyckeRepoGet.GetAllNecklace();
+            return View(necklace);
+        }
     }
 }

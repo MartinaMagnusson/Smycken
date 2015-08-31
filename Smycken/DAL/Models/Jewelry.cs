@@ -9,9 +9,9 @@ namespace DAL.Models
    public class Jewelry
     {
         public int ID { get; set; }
-        public List<Necklace> Necklaces { get; set; }
-        public List<Bracelet> Bracelets { get; set; }
-        public List<AncleJewelry> AncleJewelries { get; set; }
-        public List<Earrings> Earrings { get; set; }
+        public virtual List<Necklace> Necklaces { get; set; }
+        public virtual List<Bracelet> Bracelets { get; set; }
+        public virtual List<AncleJewelry> AncleJewelries { get; set; }
+        public virtual List<Earrings> Earrings { get; set; }
     }
 }

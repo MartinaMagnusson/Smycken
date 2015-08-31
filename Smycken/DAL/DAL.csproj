@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelperClasses\AddJewelry.cs" />
     <Compile Include="HelperClasses\AncleJewelryHelper.cs" />
     <Compile Include="HelperClasses\BraceletHelper.cs" />
     <Compile Include="HelperClasses\ContactHelper.cs" />

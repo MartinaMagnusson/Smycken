@@ -110,14 +110,17 @@ nav {
         color: white;
     }
 
-.caption {
+    .glyphicon{
+vertical-align:middle;
+    }
+.category {
     text-align: center;
     color: white;
     font-size: 1.7rem;
     background-color: gray;
     z-index: 2;
     height: 35px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     margin-top: -65px;
     padding: 5px;
@@ -169,6 +172,8 @@ hr {
 }
 
 .test a {
+    margin: 0 auto;
+    text-align: center;
     color: black;
     margin-top: 20px;
 }
@@ -178,9 +183,6 @@ hr {
     text-decoration: none;
 }
 
-.test2:hover {
-      color: #36d7b7;
-}
 
 li {
     list-style: none;

@@ -10,10 +10,10 @@
 <hr style="height:0.1em; opacity: 0.3;" />
 
 <div>
-    <div class="row margin">
+    <div class="row">
         @foreach (var image in Model)
         {
-            <a href="/Jewelry/@image.Categori" class="col-md-3 col-sm-6 col-xs-12">
+            <a href="/Jewelry/@image.Categori" class="col-md-3">
                 <img class="news col-md-12" src="~/Images/@image.FileName" />
                 <p class="caption col-md-12">@image.Description</p>
             </a>

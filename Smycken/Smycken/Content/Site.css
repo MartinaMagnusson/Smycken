@@ -29,7 +29,7 @@ textarea {
 
 header {
     background-color: #f8f8f8;
-    padding: 20px 0 150px 0;
+    padding: 20px;
     margin: 0;
     width: 100%;
 }
@@ -43,6 +43,17 @@ header {
         display: inline-block;
         font-style: oblique;
     }
+
+.header-text {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-text img {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 30px;
+}
 
 #cart {
     background-color: #f8f8f8;
@@ -76,11 +87,6 @@ header p#cart span {
     display: inline-block;
 }
 
-.margin {
-    /*margin-bottom: 10px;*/
-    margin: 0 !important;
-}
-
 nav {
     float: left;
     margin: 0 auto;
@@ -95,6 +101,7 @@ nav {
 .news {
     margin: 0 0 10px 0 !important;
     padding: 20px 0 !important;
+    width: 100%;
 }
 
 
@@ -158,20 +165,12 @@ hr {
     height: 1px;
     text-align: center;
     display: block;
-    margin: 15px 40px;
-}
-
-.sep {
-     border-top: 3px solid #36d7b7;
-    width: 80px;
-    height: 1px;
-    text-align: center;
-    display: block;
-    margin: 15px 28px;
+    margin: 15px auto;
 }
 
 .test a {
     color: black;
+    margin-top: 20px;
 }
 
 .test a:hover {

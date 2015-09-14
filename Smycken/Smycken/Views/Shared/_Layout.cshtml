@@ -15,53 +15,55 @@
     <meta name="description" content="The description of my page" />
 </head>
 <body>
-    <div class="row">
-        <div class="container">
+    <header class="container-fluid">
+        <div class="row">
+            <h1 class="header-text col-md-5">Fannys Smycken</h1>
+
+            <div class="header-text col-md-4 info">
+                <p class="header-info"><span class="bold">Frakt</span> 49 kr</p>
+                <p class="header-info"><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
+            </div>
+            <div class="header-text col-md-3">
+                <img id="shopping-cart" src=" ~/Images/shoppingbag.ico" alt="shopping cart" />
+                <a href="#"><p id="cart">Gå till kassan<span>▶</span></p></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="header-text test col-md-4">
+                <a href="#">
+                    <img src="~/Images/thumb.ico"/>
+                    <h3 class="header-heading">
+                        Modern Design
+                    </h3>
+                    <div class="seper"></div>
+                </a>
+            </div>
+
+            <div class="header-text test col-md-4">
+                <a href="#">
+                    <img src="~/Images/check_mark.ico"/>
+                    <h3 class="header-heading">
+                        Hög Kvalitet
+                    </h3>
+                    <div class="seper"></div>
+                </a>
+            </div>
+
+            <div class="header-text test col-md-4">
+                <a href="#">
+                    <img src="~/Images/thumb.ico"/>
+                    <h3 class="header-heading">
+                        Snabb Support
+                    </h3>
+                    <div class="seper"></div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <header>
-                    <div class="col-md-12">
-                        <h1 class="col-md-5">Fannys Smycken</h1>
-
-                        <div class="col-md-4 info">
-                            <p class="header-info"><span class="bold">Frakt</span> 49 kr</p>
-                            <p class="header-info"><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
-                        </div>
-                        <div class="col-md-3">
-                            <img id="shopping-cart" src=" ~/Images/shoppingbag.ico" alt="shopping cart" />
-                            <a href="#"><p id="cart">Gå till kassan<span>▶</span></p></a>
-                        </div>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a href="#">
-                            <img src="~/Images/thumb.ico" style="width:30px; margin-left: 60px; margin-bottom: -10px;" />
-                            <h3 class="header-heading">
-                                Modern Design
-                            </h3>
-                            <div class="seper"></div>
-                        </a>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a href="#">
-                            <img src="~/Images/check_mark.ico" style="width:30px; margin-left: 50px; margin-bottom: -10px;" />
-                            <h3 class="header-heading">
-                                Hög Kvalitet
-                            </h3>
-                            <div class="sep"></div>
-                        </a>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a href="#">
-                            <img src="~/Images/thumb.ico" style="width:30px; margin-left: 60px; margin-bottom: -10px;" />
-                            <h3 class="header-heading">
-                                Snabb Support
-                            </h3>
-                            <div class="seper"></div>
-                        </a>
-                    </div>
-                </header>
                 <hr />
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -81,7 +83,7 @@
                 </nav>
             </div>
 
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 col-xs-12">
                 <div>
                     @RenderBody()
                 </div>
@@ -95,59 +97,58 @@
             </div>
 
         </div>
-        <div class="row">
-            <footer>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 footer-list">
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>KUNDTJÄNST</h3>
-                                <ul>
-                                    <li><a href="#">KONTAKTA OSS</a></li>
-                                    <li><a href="#">KÖPVILLKOR</a></li>
-                                    <li><a href="#">RETURER & BYTEN</a></li>
-                                    <li><a href="#">REKLAMATIONER</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>INFORMATION</h3>
-                                <ul>
-                                    <li><a href="#">OM FÖRETAGET</a></li>
-                                    <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>SOCIALA MEDIER</h3>
-                                <ul>
-                                    <li><a href="#">FACEBOOK</a></li>
-                                    <li><a href="#">INSTAGRAM</a></li>
-                                    <li><a href="#">TWITTER</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>SORTIMENT</h3>
-                                <ul>
-                                    <li>@Html.ActionLink("ANKELSMYCKEN", "AncleJewelry", "Jewelry")</li>
-                                    <li>@Html.ActionLink("ARMBAND", "Index", "Jewelry")</li>
-                                    <li>@Html.ActionLink("HALSBAND", "Index", "Jewelry")</li>
-                                    <li>@Html.ActionLink("ÖRHÄNGEN", "Index", "Jewelry")</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        </div>
     </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 footer-list">
+                <ul class="col-md-3">
+                    <li>
+                        <h3>KUNDTJÄNST</h3>
+                        <ul>
+                            <li><a href="#">KONTAKTA OSS</a></li>
+                            <li><a href="#">KÖPVILLKOR</a></li>
+                            <li><a href="#">RETURER & BYTEN</a></li>
+                            <li><a href="#">REKLAMATIONER</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="col-md-3">
+                    <li>
+                        <h3>INFORMATION</h3>
+                        <ul>
+                            <li><a href="#">OM FÖRETAGET</a></li>
+                            <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="col-md-3">
+                    <li>
+                        <h3>SOCIALA MEDIER</h3>
+                        <ul>
+                            <li><a href="#">FACEBOOK</a></li>
+                            <li><a href="#">INSTAGRAM</a></li>
+                            <li><a href="#">TWITTER</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="col-md-3">
+                    <li>
+                        <h3>SORTIMENT</h3>
+                        <ul>
+                            <li>@Html.ActionLink("ANKELSMYCKEN", "AncleJewelry", "Jewelry")</li>
+                            <li>@Html.ActionLink("ARMBAND", "Index", "Jewelry")</li>
+                            <li>@Html.ActionLink("HALSBAND", "Index", "Jewelry")</li>
+                            <li>@Html.ActionLink("ÖRHÄNGEN", "Index", "Jewelry")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

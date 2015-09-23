@@ -54,6 +54,7 @@
     <Compile Include="HelperClasses\ContactHelper.cs" />
     <Compile Include="HelperClasses\EarringsHelper.cs" />
     <Compile Include="HelperClasses\ImageHelper.cs" />
+    <Compile Include="HelperClasses\JewelryCategory.cs" />
     <Compile Include="HelperClasses\JewelryHelper.cs" />
     <Compile Include="HelperClasses\NecklaceHelper.cs" />
     <Compile Include="Models\About.cs" />

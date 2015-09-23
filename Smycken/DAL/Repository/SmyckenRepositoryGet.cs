@@ -30,7 +30,6 @@ namespace DAL.Repository
                         }).ToList();
             }
         }
-
         //public List<JewelryHelper> GetAllJewelryCategories()
         //{
         //    using (var _context = new SmyckenContext())

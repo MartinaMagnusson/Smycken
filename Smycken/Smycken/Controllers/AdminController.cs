@@ -29,9 +29,22 @@ namespace Smycken.Controllers
             return View(jewelry);
         }
         [HttpPost]
-        public ActionResult AddAncleJewelry(AncleJewelryHelper ancleJewelry, ImageHelper image)
+        public ActionResult AddJewelry(AddJewelry jewelry)
+        //public ActionResult AddJewelry(AddJewelry jewelry, ImageHelper image)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                if (jewelry.Category == JewelryCategory.AncleJewelry)
+                    _smyckeRepoCreate.AddAnkleJewelry(jewelry);
+                if (jewelry.Category == JewelryCategory.Bracelet)
+                    _smyckeRepoCreate.AddBracelet(jewelry);
+                if (jewelry.Category == JewelryCategory.Necklace)
+                    _smyckeRepoCreate.AddNecklace(jewelry);
+                if (jewelry.Category == JewelryCategory.Earrings)
+                    _smyckeRepoCreate.AddEarrings(jewelry);
+            }
+            return View(jewelry);
         }
+
     }
 }

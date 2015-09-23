@@ -179,6 +179,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\check_mark.ico" />
+    <Content Include="Images\imageMissing.jpg" />
     <Content Include="Images\thumb.ico" />
     <Content Include="Images\shoppingbag.ico" />
     <Content Include="Images\lovepeace1.jpg" />

@@ -26,8 +26,8 @@ namespace DAL.HelperClasses
 
         public ImageHelper Image { get; set; }
         public string Description { get; set; }
-        [Required(ErrorMessage = "Du måste ange en kategori.")]
+        [Required(ErrorMessage = "Du måste välja en kategori.")]
         [Display(Name = "Kategori")]
-        public string Category { get; set; }
-    }   
+        public JewelryCategory Category { get; set; }
+    }
 }

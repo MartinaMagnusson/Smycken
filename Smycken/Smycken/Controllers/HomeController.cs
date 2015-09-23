@@ -30,12 +30,6 @@ namespace Smycken.Controllers
         {
             return PartialView();
         }
-        public ActionResult Test()
-        {
-            var contact = _smyckeRepoGet.GetContactInformation();
-            return View(contact);
-        }
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

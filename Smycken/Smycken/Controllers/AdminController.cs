@@ -34,14 +34,7 @@ namespace Smycken.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (jewelry.Category == JewelryCategory.AncleJewelry)
-                    _smyckeRepoCreate.AddAnkleJewelry(jewelry);
-                if (jewelry.Category == JewelryCategory.Bracelet)
-                    _smyckeRepoCreate.AddBracelet(jewelry);
-                if (jewelry.Category == JewelryCategory.Necklace)
-                    _smyckeRepoCreate.AddNecklace(jewelry);
-                if (jewelry.Category == JewelryCategory.Earrings)
-                    _smyckeRepoCreate.AddEarrings(jewelry);
+                _smyckeRepoCreate.AddJewelry(jewelry);
             }
             return View(jewelry);
         }

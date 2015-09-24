@@ -13,21 +13,29 @@ namespace DAL.HelperClasses
         [Display(Name = "Pris")]
         [RegularExpression(@"[0-9]*", ErrorMessage = "Använd bara siffror")]
         public double Price { get; set; }
+
         [Required(ErrorMessage = "Du måste ange ett produktnamn.")]
         [Display(Name = "Produktnamn")]
         [RegularExpression(@"[a-zA-ZåäöÅÄÖ]*", ErrorMessage = "Använd bara bokstäver")]
         public string Name { get; set; }
+
         [Required(ErrorMessage = "Du måste ange ett artikelnummer.")]
         [Display(Name = "Artikelnummer")]
         [RegularExpression(@"[0-9]*", ErrorMessage = "Använd bara siffror")]
         public int ArticleNr { get; set; }
-        [Required(ErrorMessage = "Du måste ange en produktbeskrivning.")]
-        [Display(Name = "Produktbeskrivning")]
 
-        public ImageHelper Image { get; set; }
+        [Required(ErrorMessage = "Du måste ange en produktbeskrivning.")]
+        [Display(Name = "Produktbeskrivning")]   
         public string Description { get; set; }
-        [Required(ErrorMessage = "Du måste ange en kategori.")]
+
+        [Required(ErrorMessage = "Du måste ange ett antal.")]
+        [Display(Name = "Antal")]
+        public int Quantity { get; set; }
+
+        [Required(ErrorMessage = "Du måste välja en kategori.")]
         [Display(Name = "Kategori")]
-        public string Category { get; set; }
-    }   
+        public JewelryCategory Category { get; set; }
+
+        //public ImageHelper Image { get; set; }
+    }
 }

@@ -29,9 +29,15 @@ namespace Smycken.Controllers
             return View(jewelry);
         }
         [HttpPost]
-        public ActionResult AddAncleJewelry(AncleJewelryHelper ancleJewelry, ImageHelper image)
+        public ActionResult AddJewelry(AddJewelry jewelry)
+        //public ActionResult AddJewelry(AddJewelry jewelry, ImageHelper image)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _smyckeRepoCreate.AddJewelry(jewelry);
+            }
+            return View(jewelry);
         }
+
     }
 }

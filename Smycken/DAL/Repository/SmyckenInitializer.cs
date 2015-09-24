@@ -9,26 +9,20 @@ using DAL.Models;
 
 namespace DAL.Repository
 {
-    public class SmyckenInitializer : DropCreateDatabaseAlways<SmyckenContext>
+    public class SmyckenInitializer : DropCreateDatabaseIfModelChanges<SmyckenContext>
     {
         private List<Contact> _contact;
         private List<About> _about;
         private List<Jewelry> _jewelries;
-        private List<Earrings> _earrings;
-        private List<Necklace> _necklaces;
         private List<Product> _products;
-        private List<AncleJewelry> _ancleJewelries;
         private List<Cart> _carts;
-        private List<Bracelet> _bracelets;
         private List<Image> _images;
         public SmyckenInitializer()
         {
             _contact = new List<Contact>();
             _about = new List<About>();
-            _bracelets = new List<Bracelet>();
-            _ancleJewelries = new List<AncleJewelry>();
-            _necklaces = new List<Necklace>();
             _carts = new List<Cart>();
+<<<<<<< HEAD
             _earrings = new List<Earrings>();
             _jewelries = new List<Jewelry>() {
                 new Jewelry() {
@@ -102,6 +96,9 @@ namespace DAL.Repository
             };
 
 
+=======
+            _jewelries = new List<Jewelry>();
+>>>>>>> 17d03019e7b49a72f78de9332d56ee537abf9135
             _products = new List<Product>();
             _images = new List<Image>()
             {
@@ -164,12 +161,8 @@ namespace DAL.Repository
         {
             _contact.ForEach(x => context.Contact.Add(x));
             _about.ForEach(x => context.About.Add(x));
-            _bracelets.ForEach(x => context.Bracelets.Add(x));
-            _ancleJewelries.ForEach(x => context.AncleJewelries.Add(x));
             _carts.ForEach(x => context.Carts.Add(x));
-            _earrings.ForEach(x => context.Earrings.Add(x));
             _jewelries.ForEach(x => context.Jewelries.Add(x));
-            _necklaces.ForEach(x => context.Necklaces.Add(x));
             _products.ForEach(x => context.Products.Add(x));
             _images.ForEach(x => context.Images.Add(x));
             base.InitializeDatabase(context);

@@ -10,24 +10,25 @@ namespace DAL.Repository
 {
     public class SmyckenRepositoryCreate
     {
-        public void AddAncleJewelry(AncleJewelryHelper ancleJewelry, Image image)
+        public void AddJewelry(AddJewelry jewelry)
+        //public void AddJewelry(AddJewelry jewelry, ImageHelper image)
         {
             using (var _context = new SmyckenContext())
             {
-                _context.AncleJewelries.Add(new AncleJewelry()
-                {
-                    ArticleNr = ancleJewelry.ArticleNr,
-                    Description = ancleJewelry.Description,
-                    Name = ancleJewelry.Name,
-                    Price = ancleJewelry.Price,
-                    Image = _context.Images.Add(new Image()
-                    {
-                        Categori = image.Categori,
-                        Description = image.Description,
-                        FileName = image.FileName,
-                        News = image.News,
-                    })
-
+                _context.Jewelries.Add(new Jewelry()
+                {                 
+                        Name = jewelry.Name,
+                        Price = jewelry.Price,
+                        ArticleNr = jewelry.ArticleNr,
+                        Quantity = jewelry.Quantity,
+                        Description = jewelry.Description,
+                        Category = jewelry.Category,
+                        //Image = new Image()
+                        //{
+                        //    Categori = image.Categori,
+                        //    Description = image.Description,
+                        //    FileName = image.FileName
+                        //}
                 });
                 _context.SaveChanges();
             }

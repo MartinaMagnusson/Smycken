@@ -1,4 +1,4 @@
-﻿@model List<DAL.HelperClasses.NecklaceHelper>
+﻿@model List<DAL.HelperClasses.JewelryHelper>
 
 @{
     ViewBag.Title = "Necklace";
@@ -14,7 +14,14 @@
             <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
                     <a href="#">
-                        <img src="~/Images/@item.ImageFileName" />
+                        @if (item.ImageFileName != null)
+                        {
+                            <img src="~/Images/@item.ImageFileName" />
+                        }
+                        else
+                        {
+                            <img src="~/Images/imageMissing.jpg" />
+                        }
                         <div class="caption">
                             <h3>@item.Name</h3>
                             <p>@item.Description</p>

@@ -47,9 +47,61 @@ namespace DAL.Repository
                                 FileName = "lovepeace1.jpg"
                             }
                         }
+                    },
+                    Necklaces = new List<Necklace>()
+                    {
+                        new Necklace()
+                        {
+                            Name = "Halsband",
+                            Price = 59,
+                            ArticleNr = 0001,
+                            Description = "Ett halsband",
+                            Image = new Image
+                            {
+                                Description = "Ett halsband",
+                                News = false,
+                                FileName = "lovepeace1.jpg"
+                            }
+                        }
+                    },
+
+                    Bracelets = new List<Bracelet>()
+                    {
+                        new Bracelet()
+                        {
+                            Name = "Armband",
+                            Price = 59,
+                            ArticleNr = 0003,
+                            Description = "Ett Armband",
+                            Image = new Image
+                            {
+                                Description = "Ett armband",
+                                News = false,
+                                FileName = "lovepeace1.jpg"
+                            }
+                        }
+                    },
+
+                    Earrings = new List<Earrings>()
+                    {
+                        new Earrings()
+                        {
+                            Name = "Örhänge",
+                            Price = 59,
+                            ArticleNr = 0003,
+                            Description = "Ett örhänge",
+                            Image = new Image
+                            {
+                                Description = "Ett örhänge",
+                                News = false,
+                                FileName = "lovepeace1.jpg"
+                            }
+                        }
                     }
                 }
             };
+
+
             _products = new List<Product>();
             _images = new List<Image>()
             {

@@ -1,8 +1,11 @@
-﻿body {
+﻿@import url('Carousel.css');
+@import url('infoSection.css');
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:700);
+
+body {
     padding-bottom: 20px;
     margin: 0;
     padding: 0;
-    background-color: #ddd !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -14,6 +17,14 @@
 .container {
     box-shadow: 0 0 5px black;
     background-color: white;
+}
+
+.site-container {
+    padding: 0 !important;
+}
+
+.carousel-slide {
+    margin: 0 auto !important;
 }
 
 .row {
@@ -49,11 +60,11 @@ header {
     text-align: center;
 }
 
-.header-text img {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 30px;
-}
+    .header-text img {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 30px;
+    }
 
 #cart {
     background-color: #f8f8f8;
@@ -96,6 +107,12 @@ nav {
 
     nav ul li {
         list-style-type: none;
+        margin: 10px;
+        -moz-transform: rotateZ(270deg);
+        -ms-transform: rotateZ(270deg);
+        -o-transform: rotateZ(270deg);
+        -webkit-transform: rotateZ(270deg);
+        transform: rotateZ(270deg);
     }
 
 .news {
@@ -110,9 +127,10 @@ nav {
         color: white;
     }
 
-    .glyphicon{
-vertical-align:middle;
-    }
+.glyphicon {
+    vertical-align: middle;
+}
+
 .category {
     text-align: center;
     color: white;
@@ -163,7 +181,7 @@ hr {
 }
 
 .seper {
-    border-top: 3px solid #36d7b7;
+    border-top: 3px solid #fff;
     width: 80px;
     height: 1px;
     text-align: center;
@@ -174,14 +192,14 @@ hr {
 .test a {
     margin: 0 auto;
     text-align: center;
-    color: black;
+    color: #fff;
     margin-top: 20px;
 }
 
-.test a:hover {
-    color: #36d7b7;
-    text-decoration: none;
-}
+    .test a:hover {
+        color: rgb(107,133,125);
+        text-decoration: none;
+    }
 
 
 li {
@@ -208,4 +226,54 @@ footer {
 
 .footer-list {
     padding: 10px;
+}
+
+
+#menu-xl {
+    display: table;
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    font-family: 'PT Sans', sans-serif;
+    width: 100px;
+}
+
+.menu-xl-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.entry {
+    margin: auto;
+    width: 30px;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.menu-link {
+    display: block;
+        text-decoration: none !important;
+}
+
+.menu-link-hover:before, .menu-link-hover:after {
+    background: transparent;
+    content: "";
+    display: block;
+    margin: 10px auto;
+    width: 0;
+    height: 1px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

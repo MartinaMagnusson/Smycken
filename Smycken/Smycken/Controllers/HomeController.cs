@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DAL.HelperClasses;
 using DAL.Repository;
+using System.Threading.Tasks;
 
 namespace Smycken.Controllers
 {
@@ -30,24 +31,11 @@ namespace Smycken.Controllers
         {
             return PartialView();
         }
-        public ActionResult Test()
+
+        [ChildActionOnly]
+        public ActionResult InfoSection()
         {
-            var contact = _smyckeRepoGet.GetContactInformation();
-            return View(contact);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return PartialView();
         }
     }
 }

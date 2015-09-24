@@ -12,149 +12,204 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/SetScreenHeight.js"></script>
     <meta name="description" content="The description of my page" />
+
+    <script>
+        $(document).ready(function(){
+        $(this).scrollTop(0);
+        });
+    </script>
 </head>
 <body>
     <header class="container-fluid">
-    <div class="row">
+        <div class="row">
             <h1 class="header-text col-md-5">Fannys Smycken</h1>
 
             <div class="header-text col-md-4 info">
-                            <p class="header-info"><span class="bold">Frakt</span> 49 kr</p>
-                            <p class="header-info"><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
-                        </div>
+                <p class="header-info"><span class="bold">Frakt</span> 49 kr</p>
+                <p class="header-info"><span class="bold">Leveranstid</span>  1-5 arbetsdagar</p>
+            </div>
             <div class="header-text col-md-3">
-                            <img id="shopping-cart" src=" ~/Images/shoppingbag.ico" alt="shopping cart" />
-                            <a href="#"><p id="cart">Gå till kassan<span>▶</span></p></a>
-                        </div>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a>
-                            <h3><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></h3>
-                            <h3 class="header-heading">
-                                Modern Design
-                            </h3>
-                            <div class="seper"></div>
-                        </a>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a>
-                            <h3><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h3>
-                            <h3 class="header-heading">
-                                Hög Kvalitet
-                            </h3>
-                            <div class="seper"></div>
-                        </a>
-                    </div>
-
-                    <div class="test col-md-4">
-                        <a>
-                            <h3><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h3>
-                            <h3 class="header-heading">
-                                Snabb Support
-                            </h3>
-                            <div class="seper"></div>
-                        </a>
-                    </div>
+                <img id="shopping-cart" src=" ~/Images/shoppingbag.ico" alt="shopping cart" />
+                <a href="#"><p id="cart">Gå till kassan<span>▶</span></p></a>
+            </div>
         </div>
-                </header>
-    <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <hr />
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            @*<a class="navbar-brand" href="#">WebSiteName</a>*@
-                        </div>
-                        <div>
-                            <ul class="nav navbar-nav">
-                                <li class="active">@Html.ActionLink("Hem", "Index", "Home")</li>
-                                <li>@Html.ActionLink("Ankelsmycken", "AncleJewelry", "Jewelry")</li>
-                                <li>@Html.ActionLink("Armband", "Index", "Jewelry")</li>
-                                <li>@Html.ActionLink("Halsband", "Index", "Jewelry")</li>
-                                <li>@Html.ActionLink("Örhänge", "Index", "Jewelry")</li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+            <div class="test col-md-4">
+                <a>
+                    <h3><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></h3>
+                    <h3 class="header-heading">
+                        Modern Design
+                    </h3>
+                    <div class="seper"></div>
+                </a>
             </div>
 
-            <div class="col-md-10 col-xs-12">
-                <div>
-                    @RenderBody()
-                </div>
-                <hr style="height:0.05em; opacity: 0.3" />
-                <div class="media col-md-8 col-md-offset-2">
-                    <a href="#"><img class="col-md-3" src="~/Images/facebook.png" /></a>
-                    <a href="#"><img class="col-md-3" src="~/Images/instagram.png" /></a>
-                    <a href="#"><img class="col-md-3" src="~/Images/twitter.png" /></a>
-                    <a href="#"><img class="col-md-3" src="~/Images/mail.png" /></a>
-                </div>
+            <div class="test col-md-4">
+                <a>
+                    <h3><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h3>
+                    <h3 class="header-heading">
+                        Hög Kvalitet
+                    </h3>
+                    <div class="seper"></div>
+                </a>
             </div>
 
+            <div class="test col-md-4">
+                <a>
+                    <h3><span class="glyphicon glyphicon-send" aria-hidden="true"></span></h3>
+                    <h3 class="header-heading">
+                        Snabb Support
+                    </h3>
+                    <div class="seper"></div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <nav id="menu-xl">
+            <div class="menu-xl-inner">
+                <div id="menu-home" class="entry menulogo">
+                    <a class="menu-link" href="#home">
+                        <svg class="logo-stroked">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-stroked"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="entry item text-center">
+                    <a id="menu-expertises" class="menu-link menu-link-hover" href="#conseil">
+                        <span class="label">h</span>
+                        <span class="label">o</span>
+                        <span class="label">m</span>
+                        <span class="label">e</span>
+                    </a>
+                </div>
+                <div class="entry item text-center">
+                    <a id="menu-vous" class="menu-link menu-link-hover" href="#vous">
+                        <span class="label">c</span>
+                        <span class="label">o</span>
+                        <span class="label">l</span>
+                        <span class="label">l</span>
+                        <span class="label">e</span>
+                        <span class="label">c</span>
+                        <span class="label">t</span>
+                        <span class="label">i</span>
+                        <span class="label">o</span>
+                        <span class="label">n</span>
+                    </a>
+                </div>
+                <div class="entry item text-center">
+                    <a id="menu-duo" class="menu-link menu-link-hover" href="#duo">
+                        <span class="label">a</span>
+                        <span class="label">b</span>
+                        <span class="label">o</span>
+                        <span class="label">u</span>
+                        <span class="label">t</span>
+                    </a>
+                </div>
+                <div class="entry item text-center">
+                    <a id="menu-contact" class="menu-link menu-link-hover" href="#contact">
+                        <span class="label">c</span>
+                        <span class="label">o</span>
+                        <span class="label">n</span>
+                        <span class="label">t</span>
+                        <span class="label">a</span>
+                        <span class="label">c</span>
+                        <span class="label">t</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="col-md-12 col-xs-12">
+            <div>
+                @RenderBody()
+            </div>
+            <hr style="height:0.05em; opacity: 0.3" />
+            <div class="media col-md-8 col-md-offset-2">
+                <a href="#"><img class="col-md-3" src="~/Images/facebook.png" /></a>
+                <a href="#"><img class="col-md-3" src="~/Images/instagram.png" /></a>
+                <a href="#"><img class="col-md-3" src="~/Images/twitter.png" /></a>
+                <a href="#"><img class="col-md-3" src="~/Images/mail.png" /></a>
+            </div>
         </div>
     </div>
     <footer class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 footer-list">
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>KUNDTJÄNST</h3>
-                                <ul>
-                                    <li><a href="#">KONTAKTA OSS</a></li>
-                                    <li><a href="#">KÖPVILLKOR</a></li>
-                                    <li><a href="#">RETURER & BYTEN</a></li>
-                                    <li><a href="#">REKLAMATIONER</a></li>
-                                </ul>
-                            </li>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 footer-list">
+                <ul class="col-md-3">
+                    <li>
+                        <h3>KUNDTJÄNST</h3>
+                        <ul>
+                            <li><a href="#">KONTAKTA OSS</a></li>
+                            <li><a href="#">KÖPVILLKOR</a></li>
+                            <li><a href="#">RETURER & BYTEN</a></li>
+                            <li><a href="#">REKLAMATIONER</a></li>
                         </ul>
+                    </li>
+                </ul>
 
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>INFORMATION</h3>
-                                <ul>
-                                    <li><a href="#">OM FÖRETAGET</a></li>
-                                    <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
-                                </ul>
-                            </li>
+                <ul class="col-md-3">
+                    <li>
+                        <h3>INFORMATION</h3>
+                        <ul>
+                            <li><a href="#">OM FÖRETAGET</a></li>
+                            <li><a href="#">VANLIGA FRÅGOR (FAQ)</a></li>
                         </ul>
+                    </li>
+                </ul>
 
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>SOCIALA MEDIER</h3>
-                                <ul>
-                                    <li><a href="#">FACEBOOK</a></li>
-                                    <li><a href="#">INSTAGRAM</a></li>
-                                    <li><a href="#">TWITTER</a></li>
-                                </ul>
-                            </li>
+                <ul class="col-md-3">
+                    <li>
+                        <h3>SOCIALA MEDIER</h3>
+                        <ul>
+                            <li><a href="#">FACEBOOK</a></li>
+                            <li><a href="#">INSTAGRAM</a></li>
+                            <li><a href="#">TWITTER</a></li>
                         </ul>
+                    </li>
+                </ul>
 
-                        <ul class="col-md-3">
-                            <li>
-                                <h3>SORTIMENT</h3>
-                                <ul>
-                                    <li>@Html.ActionLink("ANKELSMYCKEN", "AncleJewelry", "Jewelry")</li>
-                                    <li>@Html.ActionLink("ARMBAND", "Index", "Jewelry")</li>
-                                    <li>@Html.ActionLink("HALSBAND", "Index", "Jewelry")</li>
-                                    <li>@Html.ActionLink("ÖRHÄNGEN", "Index", "Jewelry")</li>
-                                </ul>
-                            </li>
+                <ul class="col-md-3">
+                    <li>
+                        <h3>SORTIMENT</h3>
+                        <ul>
+                            <li>@Html.ActionLink("ANKELSMYCKEN", "AncleJewelry", "Jewelry")</li>
+                            <li>@Html.ActionLink("ARMBAND", "Bracelet", "Jewelry")</li>
+                            <li>@Html.ActionLink("HALSBAND", "Necklace", "Jewelry")</li>
+                            <li>@Html.ActionLink("ÖRHÄNGE", "Earrings", "Jewelry")</li>
                         </ul>
-                    </div>
-                </div>
-            </footer>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
     @RenderSection("scripts", required: false)
 
+    <script>
+        $('.cd-slider-nav li').on('click', function (event) {
+            event.preventDefault();
+            var selectedItem = $(this);
+            if (!selectedItem.hasClass('selected')) {
+                // if it's not already selected
+                var selectedPosition = selectedItem.index(),
+                activePosition = $('.cd-hero-slider .selected').index();
+                if (activePosition < selectedPosition) {
+                    nextSlide($('.cd-hero-slider'), $('.cd-slider-nav'), selectedPosition);
+                } else {
+                    prevSlide($('.cd-hero-slider'), $('.cd-slider-nav'), selectedPosition);
+                }
 
+                updateNavigationMarker(selectedPosition + 1);
+            }
+        });
+    </script>
 </body>
 </html>
 

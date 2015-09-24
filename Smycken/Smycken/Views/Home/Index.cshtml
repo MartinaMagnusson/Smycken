@@ -2,10 +2,10 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
-    int count = 0;
 }
 
 @Html.Partial("_Carousel")
+@Html.Partial("_InfoSection")
 
 <hr style="height:0.1em; opacity: 0.3;" />
 
@@ -14,19 +14,12 @@
     <div class="row margin">
         @foreach (var image in Model)
         {
-
             <div class="col-sm-6 col-md-3">
                 <a class="thumbnail" href="/Jewelry/@image.Categori">
                     <img src="~/Images/@image.FileName" />
                     <p class="category col-xs-12 col.sm-12">@image.Description</p>
-            </a>
+                </a>
             </div>
-
-            count++;
-            if (count == 4)
-            {
-                <hr style="height:0.05em; width: 100%; opacity: 0.3;" />
-            }
         }
     </div>
 </div>

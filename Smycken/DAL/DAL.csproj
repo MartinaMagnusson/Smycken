@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="HelperClasses\AddJewelry.cs" />
     <Compile Include="HelperClasses\ContactHelper.cs" />
+    <Compile Include="HelperClasses\EditJewelry.cs" />
     <Compile Include="HelperClasses\ImageHelper.cs" />
     <Compile Include="HelperClasses\JewelryCategory.cs" />
     <Compile Include="HelperClasses\JewelryHelper.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Repository\SmyckenInitializer.cs" />
     <Compile Include="Repository\SmyckenRepositoryCreate.cs" />
     <Compile Include="Repository\SmyckenRepositoryGet.cs" />
+    <Compile Include="Repository\SmyckenRepositoryUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

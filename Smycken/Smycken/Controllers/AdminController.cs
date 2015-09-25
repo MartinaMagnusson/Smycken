@@ -12,17 +12,19 @@ namespace Smycken.Controllers
     {
         private SmyckenRepositoryCreate _smyckeRepoCreate;
         private SmyckenRepositoryGet _smyckeRepoGet;
+        private SmyckenRepositoryUpdate _smyckeRepoUpdate;
         // GET: Admin
         public AdminController()
         {
             _smyckeRepoCreate = new SmyckenRepositoryCreate();
             _smyckeRepoGet = new SmyckenRepositoryGet();
+            _smyckeRepoUpdate = new SmyckenRepositoryUpdate();
         }
-        public ActionResult Index()
+        public ActionResult Products()
         {
-            return View();
+            var jewelry = _smyckeRepoGet.GetAllJewelry();
+            return View(jewelry);
         }
-
         public ActionResult AddJewelry()
         {
             var jewelry = new AddJewelry();
@@ -39,5 +41,28 @@ namespace Smycken.Controllers
             return View(jewelry);
         }
 
+        //public ActionResult EditJewelry()
+        //{
+           
+        //    return View();
+        //}
+        public ActionResult EditJewelry(int id)
+        {
+            var jewelry = _smyckeRepoGet.GetJewelryById(id);
+            return View(jewelry);
+        }
+
+        [HttpPost]
+        public ActionResult EditJewelry(EditJewelry jewelry)
+        {
+            _smyckeRepoUpdate.UpdateJewelry(jewelry);
+            return RedirectToAction("Products", "Admin");
+        }
+
+        public ActionResult RemoveJewelry(int jewelry)
+        {
+            _smyckeRepoUpdate.RemoveJewelry(jewelry);
+            return RedirectToAction("Products", "Admin");
+        }
     }
 }

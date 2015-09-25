@@ -47,12 +47,50 @@ namespace DAL.Repository
                         }).ToList();
             }
         }
+
+        public EditJewelry GetJewelryById(int jewelryID)
+        {
+            using (var _context = new SmyckenContext())
+            {
+                _context.Jewelries.AsNoTracking();
+                return (from a in _context.Jewelries
+                        where a.ID == jewelryID && a.Visibility == true
+                        select new EditJewelry
+                        {
+                            ID = a.ID,
+                            Description = a.Description,
+                            Name = a.Name,
+                            Price = a.Price,
+                            //ImageFileName = a.Image.FileName,
+                            Category = a.Category
+                        }).FirstOrDefault();
+            }
+        }
+
+        public List<JewelryHelper> GetAllJewelry()
+        {
+            using (var _context = new SmyckenContext())
+            {
+                return (from a in _context.Jewelries
+                        where a.Visibility == true     
+                        select new JewelryHelper
+                        {
+                            ID = a.ID,
+                            Description = a.Description,
+                            ArticleNr = a.ArticleNr,
+                            Name = a.Name,
+                            Price = a.Price,
+                            ImageFileName = a.Image.FileName,
+                            Category = a.Category
+                        }).ToList();
+            }
+        }
         public List<JewelryHelper> GetAllAncleJewelry()
         {
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
-                        where a.Category == JewelryCategory.AncleJewelry
+                        where a.Category == JewelryCategory.AncleJewelry && a.Visibility == true
                         select new JewelryHelper
                         {
                             ID = a.ID,
@@ -71,7 +109,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
-                        where a.Category == JewelryCategory.Bracelet
+                        where a.Category == JewelryCategory.Bracelet && a.Visibility == true
                         select new JewelryHelper
                         {
                             ID = a.ID,
@@ -90,7 +128,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
-                        where a.Category == JewelryCategory.Earrings
+                        where a.Category == JewelryCategory.Earrings && a.Visibility == true
                         select new JewelryHelper
                         {
                             ID = a.ID,
@@ -109,7 +147,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
-                        where a.Category == JewelryCategory.Necklace
+                        where a.Category == JewelryCategory.Necklace && a.Visibility == true
                         select new JewelryHelper
                         {
                             ID = a.ID,

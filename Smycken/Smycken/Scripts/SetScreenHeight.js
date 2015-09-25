@@ -1,9 +1,4 @@
-﻿//jQuery(document).ready(function () {
-//    var height = $(window).height();
-//    $('section').css('height', height)
-//});
-
-jQuery(document).ready(function () {
+﻿jQuery(document).ready(function () {
     $('section').css('height', screen.height);
     $(window).resize(function()
     {
@@ -15,4 +10,16 @@ jQuery(document).ready(function () {
 
     // call `resize` to center elements
     $(window).resize();
+
+    var $root = $('html, body');
+    $('a').click(function () {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 1000, function () {
+            window.location.hash = href;
+        });
+        return false;
+    });
 });
+

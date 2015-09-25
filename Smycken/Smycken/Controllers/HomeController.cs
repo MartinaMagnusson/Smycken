@@ -31,22 +31,5 @@ namespace Smycken.Controllers
         {
             return PartialView();
         }
-<<<<<<< HEAD
-
-        [ChildActionOnly]
-        public ActionResult InfoSection()
-=======
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
->>>>>>> 17d03019e7b49a72f78de9332d56ee537abf9135
-        {
-            return PartialView();
-        }
     }
 }

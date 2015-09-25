@@ -1,0 +1,96 @@
+﻿.element {
+    display: block;
+    opacity: 1;
+}
+
+.hero-slider {
+    position: relative;
+    /*x-index: 97;*/
+    overflow: hidden;
+}
+.owl-carousel {
+    /*display: none;
+    position: relative;*/
+    width: 100%;
+    /*-ms-touch-action: pan-y;*/
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    position: relative;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+}
+
+.owl-carousel .owl-wrapper {
+    /*display: none;*/
+    position: relative;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.thumb-container {
+    border-top: solid 1px #dbdbdb;
+    padding: 40px 0px;
+    position: relative;
+}
+
+.thumb-container .heroslider-previous {
+    position: absolute;
+    left: 40px;
+    top: 37px;
+}
+
+.thumb-container .heroslider-previous, .thumb-container .heroslider-next {
+    cursor: pointer;
+    /*display: block;*/
+    height: 80px;
+    width: 80px;
+    border: solid 1px #dbdbdb;
+    text-align: center;
+    /*-webkit-border-radius: 100%;*/
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    line-height: 80px;
+    /*-webkit-transition: border, 300ms;*/
+    -moz-transition: border, 300ms;
+    -ms-transition: border, 300ms;
+    -o-transition: border, 300ms;
+    transition: border, 300ms;
+    z-index: 99;
+}
+
+.thumb-container .heroslider-previous img, .thumb-container .heroslider-next img {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    border: 0;
+}
+
+.thumb-container .heroslider-next {
+    position: absolute;
+    right: 40px;
+    top: 37px;
+}
+
+.element.style {
+    display: block;
+    opacity: 1;
+}

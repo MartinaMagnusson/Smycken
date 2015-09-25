@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DAL.HelperClasses;
 using DAL.Repository;
+using System.Threading.Tasks;
 
 namespace Smycken.Controllers
 {
@@ -29,19 +30,6 @@ namespace Smycken.Controllers
         public ActionResult Carousel()
         {
             return PartialView();
-        }
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

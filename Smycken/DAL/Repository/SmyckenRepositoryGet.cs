@@ -67,6 +67,25 @@ namespace DAL.Repository
             }
         }
 
+        public JewelryHelper GetOneJewelryById(int jewelryID)
+        {
+            using (var _context = new SmyckenContext())
+            {
+                _context.Jewelries.AsNoTracking();
+                return (from a in _context.Jewelries
+                        where a.ID == jewelryID && a.Visibility == true
+                        select new JewelryHelper
+                        {
+                            ID = a.ID,
+                            Description = a.Description,
+                            Name = a.Name,
+                            Price = a.Price,
+                            //ImageFileName = a.Image.FileName,
+                            Category = a.Category
+                        }).FirstOrDefault();
+            }
+        }
+
         public List<JewelryHelper> GetAllJewelry()
         {
             using (var _context = new SmyckenContext())

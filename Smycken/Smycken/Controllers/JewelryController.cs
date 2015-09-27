@@ -17,6 +17,18 @@ namespace Smycken.Controllers
         {
             _smyckeRepoGet = new SmyckenRepositoryGet();
         }
+
+        public ActionResult ShowAllJewelry()
+        {
+            var jewelry = _smyckeRepoGet.GetAllJewelry();
+            return View(jewelry);
+        }
+
+        public ActionResult ShowOneJewelry(int id)
+        {
+            var jewelry = _smyckeRepoGet.GetOneJewelryById(id);
+            return View(jewelry);
+        }
         public ActionResult AncleJewelry()
         {
             var ancleJewelry = _smyckeRepoGet.GetAllAncleJewelry();

@@ -31,6 +31,11 @@ body {
     margin: 0 !important;
 }
 
+.centeredButton{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

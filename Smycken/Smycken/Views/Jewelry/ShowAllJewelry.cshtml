@@ -1,12 +1,12 @@
 ﻿@model List<DAL.HelperClasses.JewelryHelper>
 
 @{
-    ViewBag.Title = "Bracelet";
+    ViewBag.Title = "Necklace";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
-    <h2>Armband</h2>
+    <h2>Alla Smycken</h2>
     @if (Model != null)
     {
         foreach (var item in Model)
@@ -22,14 +22,12 @@
                         {
                             <img src="~/Images/imageMissing.jpg" />
                         }
-                        <div class="caption text-center">
+                        <div class="caption">
                             <h3>@item.Name</h3>
+                            <p>@item.Description</p>
                             <p>@item.Price kr</p>
                         </div>
                     </a>
-                    <div class="centeredButton">
-                        <a class="btn btn-default text-center">LÄGG I VARUKORG</a>
-                    </div>
                 </div>
             </div>
         }

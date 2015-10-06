@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Models;
+using DAL.HelperClasses;
 
 namespace DAL.Repository
 {
@@ -31,28 +32,28 @@ namespace DAL.Repository
                     FileName = "lovepeace1.jpg",
                     Description = "Ankelsmycken",
                     News = true,
-                    Categori = "AncleJewelry"
+                    Category = JewelryCategory.AncleJewelry,
                 },
                 new Image()
                 {
                     FileName = "lovepeace1.jpg",
                     Description = "Armband",
                     News = true,
-                    Categori = "Bracelet"
+                     Category = JewelryCategory.Bracelet,
                 },
                 new Image()
                 {
                     FileName = "lovepeace1.jpg",
                     Description = "Halsband",
                     News = true,
-                    Categori = "Necklace"
+                    Category = JewelryCategory.Necklace,
                 },
                 new Image()
                 {
                     FileName = "lovepeace1.jpg",
                     Description = "Örhängen",
                     News = true,
-                    Categori ="Earrings"
+                    Category = JewelryCategory.Earrings,
                 },
                 new Image()
                 {

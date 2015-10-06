@@ -26,7 +26,7 @@ namespace DAL.Repository
                             FileName = i.FileName,
                             Description = i.Description,
                             News = i.News,
-                            Categori = i.Categori
+                            Category = i.Category
                         }).ToList();
             }
         }
@@ -42,7 +42,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }
@@ -99,7 +99,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }
@@ -117,7 +117,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }
@@ -136,7 +136,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }
@@ -155,7 +155,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }
@@ -174,7 +174,7 @@ namespace DAL.Repository
                             ArticleNr = a.ArticleNr,
                             Name = a.Name,
                             Price = a.Price,
-                            ImageFileName = a.Image.FileName,
+                            PictureFileName = a.Image.FileName,
                             Category = a.Category
                         }).ToList();
             }

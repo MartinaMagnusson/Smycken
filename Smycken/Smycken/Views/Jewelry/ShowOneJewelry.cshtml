@@ -11,9 +11,9 @@
     {
         <div class="col-sm-7">
             <div class="thumbnail">
-                @if (Model.ImageFileName != null)
+                @if (Model.PictureFileName != null)
                 {
-                    <img src="~/Images/@Model.ImageFileName" />
+                    <img src="~/Images/@Model.PictureFileName" />
                 }
                 else
                 {
@@ -29,12 +29,21 @@
                 <h3>@Model.Price kr</h3>
                 @if (Model.Quantity <= 1)
                 {
-                    <p>Lagerstatus: <span class="label label-success">I lager</span> </p>
+                    if (Model.Quantity <= 4)
+                    {
+                        <p>Lagerstatus: <span class="label label-success">I lager</span> </p>
+                    }
+                    else
+                    {
+                        <p>Lagerstatus: <span class="label label-warning">I lager</span> </p>
+                    }
+
                 }
                 else
                 {
                     <p>Lagerstatus: <span class="label label-danger">Ej i lager</span> </p>
                 }
+                <input type="number" value="1" min="1" max="10" class="form-control" />
                 <a class="btn btn-default">LÄGG I VARUKORG</a>
             </div>
 

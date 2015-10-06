@@ -14,9 +14,9 @@
             <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
                     <a href="@Url.Action("ShowOneJewelry", "Jewelry", new { id = item.ID})">
-                        @if (item.ImageFileName != null)
+                        @if (item.PictureFileName != null)
                         {
-                            <img src="~/Images/@item.ImageFileName" />
+                            <img src="~/Images/@item.PictureFileName" />
                         }
                         else
                         {

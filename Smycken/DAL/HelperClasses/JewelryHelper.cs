@@ -15,7 +15,8 @@ namespace DAL.HelperClasses
         public int ArticleNr { get; set; }
         public string Description { get; set; }
         public int ImageID { get; set; }
-        public string ImageFileName { get; set; }
+         public string PictureURL { get; set; }
+        public string PictureFileName { get; set; }
         public JewelryCategory Category { get; set; }
         public int Quantity { get; set; }
         public bool Visibility { get; set; }

@@ -30,7 +30,7 @@ namespace DAL.HelperClasses
         [Required(ErrorMessage = "Du måste välja en kategori.")]
         [Display(Name = "Kategori")]
         public JewelryCategory Category { get; set; }
-
-        //public ImageHelper Image { get; set; }
+        public string PictureURL { get; set; }
+        public string PictureFileName { get; set; }
     }
 }

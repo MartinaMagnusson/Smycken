@@ -12,8 +12,9 @@ namespace DAL.HelperClasses
         public int ID { get; set; }
         public string Description { get; set; }
         public string FileName { get; set; }
+        public string Url { get; set; }
         public bool News { get; set; }
-        public string Categori { get; set; }
+        public JewelryCategory Category { get; set; }
         public IEnumerator GetEnumerator()
         {
             throw new NotImplementedException();

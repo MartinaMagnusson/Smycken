@@ -18,7 +18,7 @@ namespace DAL.HelperClasses
 
         [Required(ErrorMessage = "Du måste ange ett produktnamn.")]
         [Display(Name = "Produktnamn")]
-        [RegularExpression(@"[a-zA-ZåäöÅÄÖ]*", ErrorMessage = "Använd bara bokstäver")]
+        [RegularExpression(@"[a-zA-ZåäöÅÄÖ ]*", ErrorMessage = "Använd bara bokstäver")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Du måste ange en produktbeskrivning.")]

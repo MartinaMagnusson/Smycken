@@ -80,6 +80,7 @@ namespace DAL.Repository
                             Description = a.Description,
                             Name = a.Name,
                             Price = a.Price,
+                            Quantity = a.Quantity,
                             //ImageFileName = a.Image.FileName,
                             Category = a.Category
                         }).FirstOrDefault();

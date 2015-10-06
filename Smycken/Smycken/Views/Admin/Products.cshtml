@@ -3,41 +3,21 @@
     ViewBag.Title = "EditJewelry";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Produkter</h2>
-@if (Model != null)
-{
-    <div class="col-sm-12">
-        <div class="list-group col-sm-6">
-            @foreach (var item in Model)
+<div class="container">
+    <h2>Produkter</h2>
+    @if (Model != null)
+    {
+        <div class="col-sm-12">
+            <div class="list-group col-sm-6">
+                @foreach (var item in Model)
                 {
-                <div class="input-group">
-                    <a aria-describedby="basic-addon2" class="form-control list-group-item" href="@Url.Action("EditJewelry", "Admin", new { id = item.ID})">@item.Name</a>
-                    <a href="@Url.Action("RemoveJewelry", "Admin", new { id = item.ID}) data-toggle="modal" data-target="#myModal" class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-trash pull-right"></span></a>
-                </div>
+            <div class="input-group">
+                <a aria-describedby="basic-addon2" class="form-control list-group-item" href="@Url.Action("EditJewelry", "Admin", new { id = item.ID})">@item.Name</a>
+                <a href="@Url.Action("RemoveJewelry", "Admin", new { id = item.ID})" data-toggle=" modal" data-target="#myModal" class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+            </div>
             }
-          
-        </div>
-    </div>
-}
-<table>
-    <thead>
-        <tr><th>First name</th><th>Last name</th></tr>
-    </thead>
-    <tbody data-bind="foreach: people">
-        <tr>
-            <td data-bind="text: firstName"></td>
-            <td data-bind="text: lastName"></td>
-        </tr>
-    </tbody>
-</table>
 
-<script type="text/javascript">
-    ko.applyBindings({
-        people: [
-            { firstName: 'Bert', lastName: 'Bertington' },
-            { firstName: 'Charles', lastName: 'Charlesforth' },
-            { firstName: 'Denise', lastName: 'Dentiste' }
-        ]
-    });
-</script>
+            </div>
+        </div>
+    }
+</div>

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row margin">
+<div class="container">
     <h2>Ankelsmycken</h2>
     @if (Model != null)
     {
@@ -13,7 +13,7 @@
         {
             <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="@Url.Action("ShowOneJewelry", "Jewelry", new { id = item.ID})">
                         @if (item.ImageFileName != null)
                         {
                             <img src="~/Images/@item.ImageFileName" />
@@ -22,12 +22,14 @@
                         {
                             <img src="~/Images/imageMissing.jpg" />
                         }
-                        <div class="caption">
+                        <div class="caption text-center">
                             <h3>@item.Name</h3>
-                            <p>@item.Description</p>
                             <p>@item.Price kr</p>
                         </div>
                     </a>
+                    <div class="centeredButton">
+                        <a class="btn btn-default text-center">LÄGG I VARUKORG</a>
+                    </div>
                 </div>
             </div>
         }

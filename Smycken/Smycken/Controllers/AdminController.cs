@@ -59,9 +59,9 @@ namespace Smycken.Controllers
             return RedirectToAction("Products", "Admin");
         }
 
-        public ActionResult RemoveJewelry(int jewelry)
+        public ActionResult RemoveJewelry(int id)
         {
-            _smyckeRepoUpdate.RemoveJewelry(jewelry);
+            _smyckeRepoUpdate.RemoveJewelry(id);
             return RedirectToAction("Products", "Admin");
         }
     }

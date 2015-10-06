@@ -260,6 +260,8 @@
     <Content Include="Views\Admin\Products.cshtml" />
     <Content Include="Views\Admin\EditJewelry.cshtml" />
     <Content Include="Views\Home\_InfoSection.cshtml" />
+    <Content Include="Views\Jewelry\ShowAllJewelry.cshtml" />
+    <Content Include="Views\Jewelry\ShowOneJewelry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,10 +14,10 @@ body {
     padding-right: 15px;
 }
 
-.container {
+/*.container {
     box-shadow: 0 0 5px black;
     background-color: white;
-}
+}*/
 
 .site-container {
     padding: 0 !important;
@@ -29,6 +29,11 @@ body {
 
 .row {
     margin: 0 !important;
+}
+
+.centeredButton{
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

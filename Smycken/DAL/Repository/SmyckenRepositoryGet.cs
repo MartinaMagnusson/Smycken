@@ -35,6 +35,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending
                         select new JewelryHelper
                         {
                             ID = a.ID,
@@ -43,7 +44,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity = a.Quantity,
                         }).ToList();
             }
         }
@@ -61,6 +63,7 @@ namespace DAL.Repository
                             Description = a.Description,
                             Name = a.Name,
                             Price = a.Price,
+                            Quantity = a.Quantity,
                             //ImageFileName = a.Image.FileName,
                             Category = a.Category
                         }).FirstOrDefault();
@@ -92,6 +95,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending
                         where a.Visibility == true     
                         select new JewelryHelper
                         {
@@ -101,7 +105,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity = a.Quantity
                         }).ToList();
             }
         }
@@ -110,6 +115,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending
                         where a.Category == JewelryCategory.AncleJewelry && a.Visibility == true
                         select new JewelryHelper
                         {
@@ -119,7 +125,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity = a.Quantity
                         }).ToList();
             }
         }
@@ -129,6 +136,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending
                         where a.Category == JewelryCategory.Bracelet && a.Visibility == true
                         select new JewelryHelper
                         {
@@ -138,7 +146,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity =a.Quantity
                         }).ToList();
             }
         }
@@ -148,6 +157,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending
                         where a.Category == JewelryCategory.Earrings && a.Visibility == true
                         select new JewelryHelper
                         {
@@ -157,7 +167,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity = a.Quantity
                         }).ToList();
             }
         }
@@ -167,6 +178,7 @@ namespace DAL.Repository
             using (var _context = new SmyckenContext())
             {
                 return (from a in _context.Jewelries
+                        orderby a.ID descending 
                         where a.Category == JewelryCategory.Necklace && a.Visibility == true
                         select new JewelryHelper
                         {
@@ -176,7 +188,8 @@ namespace DAL.Repository
                             Name = a.Name,
                             Price = a.Price,
                             PictureFileName = a.Image.FileName,
-                            Category = a.Category
+                            Category = a.Category,
+                            Quantity = a.Quantity
                         }).ToList();
             }
         }

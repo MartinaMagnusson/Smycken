@@ -16,6 +16,7 @@ namespace DAL.Models
         public string Description { get; set; }
         public JewelryCategory Category { get; set; }
         public virtual Image Image { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }  
         public int Quantity { get; set; }   
         public bool Visibility { get; set; }
     }

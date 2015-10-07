@@ -39,5 +39,34 @@ namespace DAL.Repository
                 _context.SaveChanges();
             }
         }
+
+        //public void CreateOrder(OrderHelper order)
+        //{
+        //    SmyckenRepositoryGet getContext = new SmyckenRepositoryGet();
+
+        //    using (var _context = new SmyckenContext())
+        //    {
+        //        var getOrder = getContext.GetOneJewelryById(order.JewelryId);
+
+        //        var newOrder = _context.Orders.Add(new Order()
+        //        {
+        //            FirstName = order.FirstName,
+        //            LastName = order.LastName,
+        //            Email = order.Email,
+        //            Phone = order.Phone,
+        //            Address = order.Address,
+        //            City = order.City,
+        //            Country = order.Country,
+        //            PostalCode = order.PostalCode,
+        //            OrderDate = order.OrderDate,
+        //            Total = order.Total,
+        //            ArticleNumber = order.ArticleNr
+        //        });
+        //        _context.Orders.Add(newOrder);
+        //        _context.SaveChanges();
+        //        // Empty the shopping cart
+        //        //EmptyCart();
+        //    }
+        //}
     }
 }

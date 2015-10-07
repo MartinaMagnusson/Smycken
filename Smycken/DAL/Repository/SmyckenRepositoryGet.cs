@@ -194,6 +194,35 @@ namespace DAL.Repository
             }
         }
 
+
+        //public OrderHelper GetOrder(int OrderId)
+        //{
+        //    using (var _context = new SmyckenContext())
+        //    {
+        //        //_context.Order.AsNoTracking();
+        //        return (from o in _context.Orders
+        //                where o.ID == OrderId
+        //                select new OrderHelper
+        //                {
+        //                    ID = o.ID,
+        //                    FirstName = o.FirstName,
+        //                    LastName = o.LastName,
+        //                    Address = o.Address,
+        //                    Name = o.ProductName,
+        //                    Quantity = o.Quantity,
+        //                    ArticleNr = o.ArticleNumber,
+        //                    City = o.City,
+        //                    Country = o.Country,
+        //                    Email = o.Email,
+        //                    Phone = o.Phone,
+        //                    OrderDate = o.OrderDate,
+        //                    UnitPrice = o.UnitPrice,
+        //                    PostalCode = o.PostalCode,
+        //                    Total = o.Total
+        //                }).FirstOrDefault();
+        //    }
+        //}
+
         //public List<ContactHelper> GetContactInformation()
         //{
         //    using (var _context = new SmyckenContext())

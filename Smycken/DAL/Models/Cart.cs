@@ -10,5 +10,8 @@ namespace DAL.Models
     {
         public int ID { get; set; }
         public List<Product> Products { get; set; }
+        public int Count { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }
+    

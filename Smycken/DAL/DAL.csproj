@@ -54,11 +54,13 @@
     <Compile Include="HelperClasses\ImageHelper.cs" />
     <Compile Include="HelperClasses\JewelryCategory.cs" />
     <Compile Include="HelperClasses\JewelryHelper.cs" />
+    <Compile Include="HelperClasses\OrderHelper.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Jewelry.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\SmyckenContext.cs" />

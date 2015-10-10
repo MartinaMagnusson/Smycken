@@ -172,6 +172,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\adminHome.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Carousel.css" />
@@ -262,6 +263,7 @@
     <Content Include="Views\Home\_InfoSection.cshtml" />
     <Content Include="Views\Jewelry\ShowAllJewelry.cshtml" />
     <Content Include="Views\Jewelry\ShowOneJewelry.cshtml" />
+    <Content Include="Views\Admin\AdminHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

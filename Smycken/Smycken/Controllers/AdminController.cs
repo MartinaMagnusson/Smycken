@@ -22,6 +22,12 @@ namespace Smycken.Controllers
             _smyckeRepoGet = new SmyckenRepositoryGet();
             _smyckeRepoUpdate = new SmyckenRepositoryUpdate();
         }
+
+        public ActionResult AdminHome()
+        {
+            return View();
+        }
+
         public ActionResult Products()
         {
             var jewelry = _smyckeRepoGet.GetAllJewelry();
@@ -77,7 +83,7 @@ namespace Smycken.Controllers
 
                 }
             }
-            return View(jewelry);
+            return RedirectToAction("Products", "Admin");
         }
 
 
@@ -141,6 +147,46 @@ namespace Smycken.Controllers
         {
             _smyckeRepoUpdate.RemoveJewelry(id);
             return RedirectToAction("Products", "Admin");
+        }
+
+        public ActionResult AddImageToCarousel()
+        {
+            return View();
+        }
+
+        public ActionResult EditImageInCarousel()
+        {
+            return View();
+        }
+
+        public ActionResult RemoveImageFromCarousel()
+        {
+            return View();
+        }
+
+        public ActionResult AddImageToNewsRoom()
+        {
+            return View();
+        }
+
+        public ActionResult EditImageInNewsRoom()
+        {
+            return View();
+        }
+
+        public ActionResult RemoveImageFromNewsRoom()
+        {
+            return View();
+        }
+
+
+        public ActionResult Messages()
+        {
+            return View();
+        }
+        public ActionResult UnreadMessages()
+        {
+            return View();
         }
     }
 }
